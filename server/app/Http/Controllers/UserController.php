@@ -654,7 +654,7 @@ class UserController extends Controller
 
     public function getUser($user)
     {
-        $user->load('docs', 'user_meta', 'comments');
+        $user->load('user_meta', 'comments');
 
         return Response::json($user);
     }
